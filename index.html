@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Animating Symbols</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      // This example adds an animated symbol to a polyline.
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 40.758896, lng: -73.985130},
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+		var locations = [[]];
+		loc34 = [40.758512, -73.985066];
+		loc35 = [40.759202, -73.984616];
+		loc36 = [40.759833, -73.984171];
+		loc37 = [40.760436, -73.983723];
+		loc38 = [40.761074, -73.983251];
+		loc39 = [40.761692, -73.982816];
+		loc33 = [40.757949, -73.985563];
+		loc32 = [40.757311, -73.985970];
+		loc31 = [40.756657, -73.986378];
+		loc30 = [40.755987, -73.986872];
+		loc24 = [40.759770, -73.987907];
+		loc14 = [40.760964, -73.990771];
+		loc04 = [40.762171, -73.993593];
+		loc44 = [40.757384, -73.982231];
+		loc54 = [40.756015, -73.979023];
+		loc23 = [40.759160, -73.988374];
+		loc22 = [40.758526, -73.988830];
+		loc21 = [40.757896, -73.989318];
+		loc20 = [40.757206, -73.989758];
+		loc25 = [40.760412, -73.987451];
+		loc26 = [40.761009, -73.986990];
+		loc27 = [40.761631, -73.986550];
+		loc28 = [40.762281, -73.986088];
+		loc29 = [40.762894, -73.985643];
+		loc15 = [40.761616, -73.990298];
+		loc05 = [40.762782, -73.993160];
+		loc45 = [40.758026, -73.981809];
+		loc55 = [40.756667, -73.978558];
+		loc_14 = [40.763350, -73.996434];
+		loc_15 = [40.763968, -73.995994];
+		loc64 = [40.755345, -73.997411];
+		loc65 = [40.755995, -73.976950];
+		
+		
+        // Define the symbol, using one of the predefined paths ('CIRCLE')
+        // supplied by the Google Maps JavaScript API.
+        var lineSymbol1 = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#393'
+        };
+
+        // Create the polyline and add the symbol to it via the 'icons' property.
+        var line1 = new google.maps.Polyline({
+          path: [{lat: loc25[0], lng: loc25[1]}, {lat: loc24[0], lng: loc24[1]}, {lat: loc34[0], lng: loc34[1]},{lat: loc30[0], lng: loc30[1]},{lat: loc34[0], lng: loc34[1]},{lat: loc24[0], lng: loc24[1]},{lat: loc29[0], lng: loc29[1]},{lat: loc25[0], lng: loc25[1]}],
+          icons: [{
+            icon: lineSymbol1,
+            offset: '100%'
+          }],
+		  strokeColor: "#FF0000",
+		  geodesic: true,
+          map: map
+        });
+		animateCircle(line1);
+		var lineSymbol2 = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#393'
+        };
+		var line2 = new google.maps.Polyline({
+          path: [{lat: loc34[0], lng: loc34[1]}, {lat: loc35[0], lng: loc35[1]}, {lat: loc25[0], lng: loc25[1]},{lat: loc29[0], lng: loc29[1]},{lat: loc25[0], lng: loc25[1]},{lat: loc35[0], lng: loc35[1]},{lat: loc30[0], lng: loc30[1]},{lat: loc34[0], lng: loc34[1]}],
+          icons: [{
+            icon: lineSymbol2,
+            offset: '100%'	
+          }],
+		  strokeColor: "#FF0000",
+		  geodesic: true,
+          map: map
+        });
+		animateCircle(line2);
+		var lineSymbol3 = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#393'
+        };
+		var line3 = new google.maps.Polyline({
+          path: [{lat: loc04[0], lng: loc04[1]},{lat: loc24[0], lng: loc24[1]},{lat: loc25[0], lng: loc25[1]},{lat: loc55[0], lng: loc55[1]},{lat: loc54[0], lng: loc54[1]},{lat: loc04[0], lng: loc04[1]},],
+          icons: [{
+            icon: lineSymbol3,
+            offset: '100%'	
+          }],
+		  strokeColor: "#C423C5",
+		  geodesic: true,
+          map: map
+        });
+		animateCircle(line3);
+		var lineSymbol4 = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#393'
+        };
+		var line4 = new google.maps.Polyline({
+          path: [{lat: loc55[0], lng: loc55[1]},{lat: loc35[0], lng: loc35[1]},{lat: loc34[0], lng: loc34[1]},{lat: loc04[0], lng: loc04[1]},{lat: loc05[0], lng: loc05[1]},{lat: loc55[0], lng: loc55[1]},],
+          icons: [{
+            icon: lineSymbol4,
+            offset: '100%'	
+          }],
+		  strokeColor: "#C423C5",
+		  geodesic: true,
+          map: map
+        });
+		animateCircle(line4);
+		var lineSymbol5 = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#393'
+        };
+		var line5 = new google.maps.Polyline({
+          path: [{lat: loc20[0], lng: loc20[1]}, {lat: loc24[0], lng: loc24[1]}, {lat: loc34[0], lng: loc34[1]},{lat: loc35[0], lng: loc35[1]},{lat: loc39[0], lng: loc39[1]},{lat: loc35[0], lng: loc35[1]},{lat: loc25[0], lng: loc25[1]},{lat: loc20[0], lng: loc20[1]}],
+          icons: [{
+            icon: lineSymbol5,
+            offset: '100%'	
+          }],
+		  strokeColor: "#03810B",
+		  geodesic: true,
+          map: map
+        });
+		animateCircle(line5);
+		var lineSymbol6 = {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 8,
+          strokeColor: '#393'
+        };
+		var line6 = new google.maps.Polyline({
+          path: [{lat: loc39[0], lng: loc39[1]}, {lat: loc35[0], lng: loc35[1]}, {lat: loc25[0], lng: loc25[1]},{lat: loc20[0], lng: loc20[1]},{lat: loc25[0], lng: loc25[1]},{lat: loc35[0], lng: loc35[1]},{lat: loc39[0], lng: loc39[1]}],
+          icons: [{
+            icon: lineSymbol6,
+            offset: '100%'	
+          }],
+		  strokeColor: "#03810B",
+		  geodesic: true,
+          map: map
+        });
+		animateCircle(line6);
+      }
+	  
+	  
+      // Use the DOM setInterval() function to change the offset of the symbol
+      // at fixed intervals.
+      function animateCircle(line) {
+          var count = 0;
+		  console.log(count);
+		  console.log(line);
+		  if(line["strokeColor"] === "#C423C5"){
+			  window.setInterval(function() {
+				count = (count + 1) % 200;
+
+				var icons = line.get('icons');
+				icons[0].offset = (count / 2) + '%';
+				line.set('icons', icons);
+			}, 40);
+		}
+		else{
+			window.setInterval(function() {
+				count = (count + 1) % 200;
+
+				var icons = line.get('icons');
+				icons[0].offset = (count / 2) + '%';
+				line.set('icons', icons);
+			}, 20);
+		}
+      }
+    </script>
+      // This example adds an animated symbol to a polyline.
+
+      function initMap() {
+
+
+        // Define the symbol, using one of the predefined paths ('CIRCLE')
+        // supplied by the Google Maps JavaScript API.
+        
+      }
+
+      // Use the DOM setInterval() function to change the offset of the symbol
+      // at fixed intervals.
+      function animateCircle(line) {
+          var count = 0;
+          window.setInterval(function() {
+            count = (count + 1) % 200;
+
+            var icons = line.get('icons');
+            icons[0].offset = (count / 2) + '%';
+            line.set('icons', icons);
+        }, 20);
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6PIIxCrfB-PUYyejh_aeZVHedDFONVv4&callback=initMap">
+    </script>
+  </body>
+</html>
